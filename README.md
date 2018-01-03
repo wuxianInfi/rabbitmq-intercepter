@@ -35,4 +35,5 @@ public class TestApplication {
 com.infi.rabbitmq.intercepter.spi.RmqProducerIntercepter
 //Consumer拦截SPI接口
 com.infi.rabbitmq.intercepter.spi.RmqConsumerIntercepter
+// 具体参照testcase
 ```
