@@ -17,14 +17,28 @@ import org.springframework.amqp.core.Message;
 
 import com.infi.rabbitmq.intercepter.model.RmqContext;
 
-/** 
- * @author hongtao 
- * @version  v 0.1 , 2018年1月3日 下午3:17:28
- * @since  JDK 1.8     
+/**
+ * @author hongtao
+ * @version v 0.1 , 2018年1月3日 下午3:17:28
+ * @since JDK 1.8
  */
 public interface RmqIntercepterChain {
 
+  /**
+   * Apply pre-handle before produce/consume message
+   * 
+   * @param message message to be produced or consumed
+   * @param context context contains exchange,routing key, queues...
+   */
   public void applyPreHandle(Message message, RmqContext context);
-  
+
+  /**
+   * Apply after-handle after produce/consume message
+   * 
+   * @param message message to be produced or consumed
+   * @param context context contains exchange,routing key, queues...
+   * @param timeUsed time used for produce/consume message
+   * @param e caught exception
+   */
   public void applyAfterHandle(Message message, RmqContext context, long timeUsed, Throwable e);
 }

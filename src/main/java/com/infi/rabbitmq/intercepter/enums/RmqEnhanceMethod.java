@@ -13,9 +13,6 @@
  */
 package com.infi.rabbitmq.intercepter.enums;
 
-import java.util.List;
-
-import com.google.common.collect.Lists;
 import com.infi.rabbitmq.intercepter.RmqMethodEnhancer;
 import com.infi.rabbitmq.intercepter.method.RmqListenerContainerEnhancer;
 import com.infi.rabbitmq.intercepter.method.RmqTemplateEnhancer;
@@ -44,10 +41,4 @@ public enum RmqEnhanceMethod {
   private final String methodName;
   private final RmqMethodEnhancer methodEnhancer;
 
-  public static List<RmqEnhanceMethod> getEnhanceMethods() {
-    List<RmqEnhanceMethod> methods = Lists.newArrayList();
-    methods.add(RAMMIT_TEMPLATE_SEND);
-    methods.add(ABASTRACE_LISTENER_CONTAINER);
-    return methods;
-  }
 }

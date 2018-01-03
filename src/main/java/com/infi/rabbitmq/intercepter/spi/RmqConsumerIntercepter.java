@@ -25,9 +25,30 @@ import com.infi.rabbitmq.intercepter.model.RmqContext;
  */
 public interface RmqConsumerIntercepter extends Ordered {
 
+  /**
+   * PRE-Handle will be invoked before consume message.
+   * 
+   * @param message message to be consumed
+   * @param context context contains listening queues
+   */
   void preHandle(Message message, RmqContext context);
 
+  /**
+   * AFTER-Completion will be invoked after consume message successfully.
+   * 
+   * @param message message to be consumed
+   * @param context context contains listening queues
+   * @param timeUsed time used for consume message
+   */
   void afterCompletion(Message message, RmqContext context, long timeUsed);
 
+  /**
+   * Exception-Caught will be invoked after consume message failed.
+   * 
+   * @param message message to be consumed
+   * @param context context contains listening queues
+   * @param timeUsed time used for consume message
+   * @param e caught exception
+   */
   void exceptionCaught(Message message, RmqContext context, long timeUsed, Throwable e);
 }

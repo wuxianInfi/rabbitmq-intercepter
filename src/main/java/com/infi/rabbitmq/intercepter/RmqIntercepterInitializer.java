@@ -62,7 +62,7 @@ public class RmqIntercepterInitializer {
       }
       long start = System.currentTimeMillis();
       try {
-        for (RmqEnhanceMethod enhanceMethod : RmqEnhanceMethod.getEnhanceMethods()) {
+        for (RmqEnhanceMethod enhanceMethod : RmqEnhanceMethod.values()) {
           generateClass(enhanceMethod);
         }
         log.info("RmqIntercepterInitializer initialize successfully, timeCost = {} ms",

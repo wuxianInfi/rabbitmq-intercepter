@@ -29,3 +29,10 @@ public class TestApplication {
   }
 }
 ```
+* SPI扩展
+```
+//Producer拦截SPI接口
+com.infi.rabbitmq.intercepter.spi.RmqProducerIntercepter
+//Consumer拦截SPI接口
+com.infi.rabbitmq.intercepter.spi.RmqConsumerIntercepter
+```
