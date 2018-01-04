@@ -1,5 +1,5 @@
 # 概述
-rabbitmq-intercepter是通过javasist字节码注入的方式实现的RMQ拦截器，支持producer和consumer的拦截，同时开放SPI扩展.
+rabbitmq-intercepter是通过javassist字节码注入的方式实现的RMQ拦截器，支持producer和consumer的拦截，同时开放SPI扩展.
 # 环境
  - Gradle
  - Java 8
